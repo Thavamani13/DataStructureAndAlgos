@@ -53,6 +53,27 @@ public class P1_LongestsubStringWIthoutrepeatingCharacters {
 	}
 	
 	
+	
+	
+	/*Traverse through the array , add each character to map  and its occurence
+	 * Since , we have a condition of disticnct characters . Whenever the value becomes more than one .
+	 *       We have to slide the window . Decrement the count of last character 
+	 *       
+	 *  When mapsize  lesser than (windowend + 1) - windowstart) shrink  
+	 *  
+	 *  
+	 *  hmap.size() < ((windowend + 1) - windowstart)
+	 *  
+	 *  abcabcbb==>Map will have a=2 , b=1,c=1 , at index 3.
+	 *  
+	 *  Map size will be 3 . [3+1 - 0 ] 
+	 *  
+	 *  Mapsize 3 < 4 
+	 *      		 	
+	
+	
+	*/
+	
 
 	private int findLongestSubString(String input) {
 		
