@@ -14,6 +14,8 @@ public class Variant_03 {
 	 * You need to have 2 distinct characters in your substring 
 	 * 
 	 * A A  A  H H I B C 
+	 * 
+	 * 
 	 */
 
 
