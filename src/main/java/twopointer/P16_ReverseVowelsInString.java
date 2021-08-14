@@ -27,12 +27,21 @@ public class P16_ReverseVowelsInString {
 	public void testcase4() {
 		String s ="a123Ab";
 		Assert.assertEquals("A123ab", reverseVowels(s));
-	}
+   }
 
 
-
-
-
+	/*convert the string to character array
+	 *
+	 * keep all the vowel characters in a string VOWELS .
+	 * left at 0 , right at the end of the index
+	 * if left or Right  is not a vowel character ,
+	 *              move the left / right pointer accordingly
+	 *
+	 *if both left and right pointer are  vowel , swap the character and move on .
+	 *
+	 * time -->O(n)  , space O(n)
+	 *
+	*/
 
 	private String reverseVowels(String s) {
 		String vowels = "aeiouAEIOU";
