@@ -21,6 +21,20 @@ public class P17_IsSubSequence {
 
 	}
 
+
+	/*left and right at zero pointing to the different strings
+	 *if left char and right character are equal
+	 *                move left++, right++
+	 *if not move right alone..
+	 *
+	 *At the end of the iteration , if my left pointer is at the end of the string1 ,
+	 *                               --> it means , string 2 maintains the sequence of string 1 -->return true
+	 *                               --->if not,
+	 *                                       string 2  does not has the sequence of string 1 -->return false
+	 *
+	 *Time ->O(n) , space O(1)
+
+	*/
 	private boolean IsSubSequence(String s, String t) {
 		int left=0 , right=0;
 
