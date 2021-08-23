@@ -76,7 +76,7 @@ public class S01_FirstUniqueCharacter {
 
 	private int findFirstUniqueCharacUsingAscii(String str) {
 		if(str.length()==0) return -1;
-		if(str.length()==1) return 1;
+		if(str.length()==1) return 1;    //statistics
 
 		int[] count= new int[26];
 
@@ -92,4 +92,22 @@ public class S01_FirstUniqueCharacter {
 		}
 
 		return -1;
-}}
+    }
+
+
+	private int findFirstUniqueInbuildFunc(String str) {
+		if(str.length()==0) return -1;
+		if(str.length()==1) return 0;    //statistics
+
+		for (int i = 0; i < str.length(); i++) {
+			char inputchar = str.charAt(i);
+			if(str.indexOf(inputchar)==str.lastIndexOf(inputchar)) return i;
+			}
+
+
+		return -1;
+
+
+
+}
+}
