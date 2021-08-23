@@ -6,6 +6,12 @@ import junit.framework.Assert;
 
 public class P04_IsTargetFound {
 
+	/*
+	 * Given an int array [1,4,20,3,10,5] and target sum 33. If target subarray sum
+	 * is found, return true else false
+	 */
+
+
 
 	@Test
 	public void testcase1() {
