@@ -36,4 +36,17 @@ public class P14_FindMinimumSizeSubArray {
 		return minSize;
 	}
 
+	private int findMinimumSizeOptimized(int[] nums, int target) {
+		int windowStart = 0, minSize = Integer.MAX_VALUE, sum = 0;
+		for (int windowEnd = 0; windowEnd < nums.length; windowEnd++) {
+			sum += nums[windowEnd];
+			while (sum >= target) {
+				minSize = Math.min(minSize, windowEnd - windowStart + 1);
+				sum -= nums[windowStart++];
+			}
+		}
+
+		return minSize != Integer.MAX_VALUE ? minSize : 0;
+	}
+
 }
