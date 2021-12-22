@@ -4,6 +4,8 @@ import org.junit.Test;
 
 public class P01_DetectCapital {
 	
+	//tested git push to origin
+	
 	//https://leetcode.com/problems/detect-capital/
 	
 	@Test
