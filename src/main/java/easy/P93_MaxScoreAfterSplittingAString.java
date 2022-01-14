@@ -4,29 +4,56 @@ import org.junit.Test;
 
 public class P93_MaxScoreAfterSplittingAString {
 	
+	//https://leetcode.com/problems/maximum-score-after-splitting-a-string/
+	
 	@Test
 	public void testcase1() {
 		String s ="011101";
-		findMaxScore(s);
+		findMaxScoreOptimized(s);
 	}
 	
 	
 	@Test
 	public void testcase2() {
 		String s ="00111";
-		findMaxScore(s);
+		findMaxScoreOptimized(s);
 	}
 	
 	@Test
 	public void testcase3() {
 		String s ="1111";
-		findMaxScore(s);
+		findMaxScoreOptimized(s);
 	}
-	
 	@Test
 	public void testcase4() {
-		String s ="01";
-		findMaxScore(s);
+		String s ="10";
+		findMaxScoreOptimized(s);
+	}
+	
+	
+	
+	private int findMaxScoreOptimized(String s) {
+		int left=1,right=s.length()-1 ;
+		int max= Integer.MIN_VALUE;
+		
+		while(left<=right) {
+			int zeroCount=0,OneCount=0,sum=0;
+			for (int i = 0; i < s.length(); i++) {
+				char inputChar=s.charAt(i);
+				if(i<left && inputChar=='0') zeroCount++;
+				else if(i>=left && inputChar=='1') {
+					OneCount++;
+				}
+			}
+			sum=OneCount+zeroCount;
+			max=Math.max(max, sum);
+			left++;
+			
+		}
+		
+		System.out.println(max);
+		return max;
+		
 	}
 
 	private int findMaxScore(String s) {
